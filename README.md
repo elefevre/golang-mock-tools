@@ -3,11 +3,12 @@
 This is an overview of the mock tools that I've tried.
 
 ### Disclaimer (or: _mockito is great_)
-As a long-time Java developer, I've been spoiled by [Mockito](http://mockito.org/). I've only recently made peace with the fact that an equivalent library is not possible in Go, because of the specifics of the language. However, many aspects such as the DSL and the assertions _should_ be possible in Go (and I miss them).
+As a long-time Java developer, I've been spoiled by [Mockito](http://mockito.org/). It's only recently that I've made peace with the fact that an equivalent library is not possible in Go, because of the specifics of the language. However, many aspects such as the DSL and the assertions _should_ be possible in Go (and I miss them).
 
+Here is what I found in my search for the Go-equivalent of Mockito.
 
-### Why using a tool for creating mocks?
-Mocks can fairly easily be written by hand, and I encourage everyone to do so. However, using mock tools should have the following benefits:
+### Why use a tool for creating mocks?
+Mocks can be written by hand fairly easily, and I encourage everyone to do so. However, using mock tools should have a number of benefits:
 - provide a uniform way to manipulate mocks accross a team
 - make it easy to configure behavior on a test-by-test basis (implementin mocks manually usually means that we have a single mock implementation, which might lead to heavier coupling between tests if not careful)
 - make some actions regarding mocks easier to understand; for example, a good DSL might make it more obvious when we are asserting that calls have been made, etc.
